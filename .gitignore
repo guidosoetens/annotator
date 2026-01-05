@@ -1,0 +1,5 @@
+*.db
+data/pictures
+data/timestamp
+team/backup
+data/backup

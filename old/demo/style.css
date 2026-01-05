@@ -1,0 +1,207 @@
+@font-face {
+    font-family: 'Christmas Squad - Personal Use';
+    src: url('../resources/Christmas Squad - Personal Use.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'gotham-medium';
+    src: url('../resources/gotham-medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'monospace';
+    src: url('../resources/monospace.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'handwriting';
+    src: url('../resources/Study Clash.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* @font-face {
+    font-family: 'FontAwesomeSolid';
+    src: url('FontAwesomeSolid-webfont.woff2') format('woff2'),
+        url('FontAwesomeSolid-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+} */
+
+@font-face {
+    font-family: 'FontAwesomeSolid';
+    src: url('../resources/fa-solid-900.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FontAwesomeRegular';
+    src: url('../resources/fa-regular-400.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.nav_elem {
+    display: inline-block;
+    /* margin-left:2px; */
+    /* margin-right:2px; */
+    margin: 5px;
+    font-size: 18px;
+    transform-origin: 6px 18px;
+    opacity: 0.5;
+    font-weight: bolder;
+}
+
+.page_button {
+    font-family: 'FontAwesomeSolid'; 
+    background: rgba(255, 255, 255, .2); 
+    font-size: 40px; 
+    border-radius: 30px; 
+    width: 80px; 
+    text-align: center; 
+    color: rgba(255, 255, 255, 1.0); 
+    padding: 10px; 
+    border-color: white; 
+    border-width: 2px;
+    display: inline-block;
+    /* margin-left: 50px; */
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    box-shadow: 0 7px #aaa;
+}
+
+/* .page_button:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+} */
+
+/* .page_button:hover {background-color: #3e8e41} */
+
+.page_button:active {
+  background-color: rgba(255, 255, 255, .5); ;
+  box-shadow: 0 3px #666;
+  transform: translateY(4px);
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, .9);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+#divGlobal {
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    font-family: 'Christmas Squad - Personal Use';
+}
+
+input {
+    border: none;
+    color:white; 
+    background: rgba(0,0,0,.5);  
+    border: solid 4px white;
+    border-radius: 20px;
+
+    font-family: 'gotham-medium';
+    font-size: 40px;
+    padding: 15px;
+    width: 500px;
+    /* left: 50px; */
+    /* position: absolute; */
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+.keyboard_btn {
+    width: 30px;
+    height: 45px;
+    display: inline-block;
+    border: solid 2px limegreen;
+    border-radius: 5px;
+    line-height: 45px;
+    margin:2px;
+}
+
+.page {
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.textbox {
+    font-size: 20px; 
+    width:400px; 
+    margin-left:50px; 
+    margin-top:50px;
+    position:absolute;
+    text-align: center;
+    color:limegreen;
+    font-weight: bolder;
+}
+
+.button {
+    border: 2px solid;
+    border-color: limegreen;
+    color:limegreen;
+    border-radius: 5px;
+    margin-top: 8px;
+    margin-left: 2px;
+    padding: 2px;
+    font-size: 24px;
+    min-width: 170px;
+    text-align: center;
+    display: inline-block;
+}
+
+.button:hover {
+    background: rgba(100, 255, 100, 1);
+    cursor: pointer;
+}
+
+.mission {
+    border: 3px solid;
+    border-color: limegreen;
+    color:limegreen;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    padding: 2px;
+    font-size: 18px;
+    width: 370px;
+    /*180px;*/
+    height: 35px;
+    text-align: right;
+    display: inline-block;
+}
+
+.mission:hover {
+    background: rgba(100, 255, 100, 1);
+    cursor: pointer;
+}

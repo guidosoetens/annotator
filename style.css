@@ -1,6 +1,14 @@
 @font-face {
-    font-family: 'Christmas Squad - Personal Use';
-    src: url('./resources/Christmas Squad - Personal Use.woff2') format('woff2');
+    font-family: 'AlteHaas';
+    src: url('./resources/AlteHaasGroteskBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Retroica';
+    src: url('./resources/Retroica.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -67,22 +75,23 @@
 }
 
 .page_button {
-    font-family: 'FontAwesomeSolid'; 
+    font-family: 'Retroica'; 
     background: rgba(255, 255, 255, .2); 
-    font-size: 40px; 
-    border-radius: 30px; 
-    width: 80px; 
+    font-size: 60px; 
+    border-radius: 50px; 
+    width: 400px; 
     text-align: center; 
     color: rgba(255, 255, 255, 1.0); 
-    padding: 10px; 
+    padding: 20px 20px 5px 20px; 
     border-color: white; 
-    border-width: 2px;
+    border-width: 3px;
     display: inline-block;
     /* margin-left: 50px; */
     border-style: solid;
     border-color: white;
-    border-width: 2px;
-    box-shadow: 0 7px #aaa;
+    border-width: 4px;
+    box-shadow: 0 7px #888;
+    text-shadow: 0px 0px 4px rgba(0,0,0,.7);
 }
 
 /* .page_button:disabled {
@@ -92,10 +101,20 @@
 
 /* .page_button:hover {background-color: #3e8e41} */
 
-.page_button:active {
-  background-color: rgba(255, 255, 255, .5); ;
-  box-shadow: 0 3px #666;
-  transform: translateY(4px);
+.page_button:active:enabled {
+  background-color: rgba(255, 255, 255, .8);
+  box-shadow: 0 3px #555;
+  transform:translateY(4px);
+}
+
+.page_button:disabled {
+    opacity: .5;
+}
+
+
+.page_button:hover:enabled { 
+    background-color: rgba(255, 255, 255, .4);
+    cursor: pointer;
 }
 
 .overlay {
@@ -181,6 +200,7 @@ textarea:focus, input:focus{
 .button:hover {
     background: rgba(100, 255, 100, 1);
     cursor: pointer;
+    text-shadow: 0px 3px 4px rgba(0,0,0,.1);
 }
 
 .mission {

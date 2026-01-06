@@ -13,6 +13,29 @@ function fitApp() {
     divGlobal.style.transform = "translateX(" + tx + "px) translateY(" + ty + "px) scale(" + scale + ")";
 }
 
+let page_index = 0;
+let session_id = 0;
+
+function setPage(index) {
+    const max_index = 2;
+    index = Math.max(0, Math.min(max_index, index));
+    page_index = index;
+
+    let imgs = [ 'profile-icon-square.png', 'banner.jpg', 'bg.jpg' ];
+    document.getElementById('divBackground').style.backgroundImage = `url(./resources/${imgs[index]})`;
+
+    document.getElementById('btnPrev').disabled = index <= 0;
+    document.getElementById('btnNext').disabled = index >= max_index;
+
+    fetch(`./php/updateSession.php?session=${session_id}&slide=${index}`, {  method: 'POST' });
+}
+
+function startSession() {
+    setVisible('divLoginOverlay', false);
+    setVisible('divAnnotationsContainer', true);
+    setPage(0);
+}
+
 function update(dt) {
     //...
 }
@@ -84,8 +107,10 @@ window.onload = () => {
         const obj = JSON.parse(data);
         if(obj.success) {
 
+            session_id = obj.session_id;
+
             const qrcode = new QRCode(document.getElementById('divLoginCode'), {
-                text: 'http://192.168.1.4/annotator/phone?session=' + obj.session_id,
+                text: 'http://192.168.1.4/annotator/phone?session=' + session_id,
                 width: 512,
                 height: 512,
                 colorDark : '#000',
@@ -102,4 +127,8 @@ window.onload = () => {
             console.log("password incorrect!");
         }
     });
+
+    document.getElementById('btnStart').onclick = (e) => { startSession(); };
+    document.getElementById('btnPrev').onclick = (e) => { setPage(page_index - 1); };
+    document.getElementById('btnNext').onclick = (e) => { setPage(page_index + 1); };
 }

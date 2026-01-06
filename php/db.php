@@ -18,7 +18,8 @@ function init_db($db) {
 
     $sql = "CREATE TABLE SESSIONS (
         SESSION_ID      INTEGER NOT NULL,
-        CURRENT_SLIDE   INTEGER NOT NULL
+        CURRENT_SLIDE   INTEGER NOT NULL,
+        HOST_ENCR       INTEGER NOT NULL
     )";
     $db->exec($sql); 
 

@@ -5,10 +5,10 @@ function fitApp() {
 
     let divGlobal = document.getElementById('divGlobal');
 
-    let scale = Math.min(w / 1920.0, h / 1080.0);
+    let scale = Math.min(w / 1080.0, h / 1920.0);
 
-    let tx = w / 2 - 1920 / 2;
-    let ty = h / 2 - 1080 / 2;
+    let tx = w / 2 - 1080 / 2;
+    let ty = h / 2 - 1920 / 2;
 
     divGlobal.style.transform = "translateX(" + tx + "px) translateY(" + ty + "px) scale(" + scale + ")";
 }
@@ -74,8 +74,8 @@ window.onload = () => {
     const urlParams = new URLSearchParams(window.location.search);
     let session = urlParams.get('session');
 
-    document.getElementById('divGlobal').innerHTML = `Session ID: ${session}`;
-    setVisible('divGlobal', true);
+    // document.getElementById('divGlobal').innerHTML = `Session ID: ${session}`;
+    // setVisible('divGlobal', true);
 
     fetch(`../php/joinSession.php?session=${session}`, { 
         method: 'POST'
